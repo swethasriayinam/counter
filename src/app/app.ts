@@ -9,4 +9,16 @@ import { RouterOutlet } from '@angular/router';
 })
 export class App {
   protected readonly title = signal('counter');
+
+  count:number=0
+
+  handleCounter(val:string){
+    if (val=='minus' && this.count>0) {
+      this.count=this.count-1
+    }else if (val=='plus') {
+      this.count=this.count+1
+    }else{
+      this.count=0
+    }
+  }
 }
