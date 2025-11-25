@@ -2,10 +2,13 @@ import { Component, effect, signal,WritableSignal, Signal, computed} from '@angu
 import { RouterOutlet } from '@angular/router';
 import {Profile} from './profile/profile';
 import {FormsModule} from '@angular/forms';
+import {NgIf} from '@angular/common';
+import {NgFor} from '@angular/common';
+import {NgSwitch, NgSwitchCase, NgSwitchDefault} from '@angular/common';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Profile, FormsModule],
+  imports: [RouterOutlet, Profile, FormsModule, NgIf, NgFor, NgSwitchCase,NgSwitch, NgSwitchDefault],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
@@ -161,5 +164,60 @@ export class App {
 // users=['Swetha', 'Sri', 'Ayinam', 'Surya', 'Kala','Sai', 'Mohan', 'Rao', 'AVR']
 // users=[]
 /*-----------------------------------------------------------------------------------------------------------*/
-name=''
+// name=''
+/*-----------------------------------------------------------------------------------------------------------*/
+// color="orange"
+// fontSize="20"
+// headingSizeBig="80px"
+// headingSizeSmall="40px"
+
+// zoom=true
+
+// updateHeadingSize(){
+//   this.zoom=!this.zoom
+// }
+/*-----------------------------------------------------------------------------------------------------------*/
+// show=true 
+/*-----------------------------------------------------------------------------------------------------------*/
+// students=['swetha', 'sri', 'kala', 'surya', 'sai'];
+// studentsData=[
+//   {
+//     name:'swetha',
+//     age:'24',
+//     email:'swetha@gamil.com',
+//   },
+//   {
+//     name:'sri',
+//     age:'22',
+//     email:'sri@gamil.com',
+//   },
+//   {
+//     name:'kala',
+//     age:'20',
+//     email:'kala@gamil.com',
+//   },
+//   {
+//     name:'surya',
+//     age:'23',
+//     email:'surya@gamil.com',
+//   },
+//   {
+//     name:'sai',
+//     age:'26',
+//     email:'sai@gamil.com',
+//   }
+// ]
+/*-----------------------------------------------------------------------------------------------------------*/
+// login=true
+// block=0
+
+// updateBlock(){
+//   this.block=this.block+1;
+// }
+/*-----------------------------------------------------------------------------------------------------------*/
+color="black"
+
+changeColor(color:string){
+  this.color=color
+}
 }
